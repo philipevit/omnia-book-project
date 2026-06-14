@@ -1,0 +1,749 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>Masculinity crisis: The rise of lonely, single men</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="df1a10aa-76f1-43de-9bce-1e5f7b9d8e59" class="page sans"><header><h1 class="page-title" dir="auto">Masculinity crisis: The rise of lonely, single men</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="3d1d078b-f01a-42cb-af81-5b01e599b799" class="">There is a growing concern that dating opportunities for heterosexual men are diminishing due to the rising relationship standards. In recent years, there has been a shift in cultural norms around relationships and what is expected from a partner. Many women are now looking for partners who are emotionally expressive, financially stable, and willing to share household responsibilities.</p></div><div style="display:contents" dir="auto"><p id="d7bb2394-2642-444b-bb10-9574adee1161" class="">This can create a challenge for some men who may not feel that they meet these standards. Additionally, with the rise of online dating and social media, there is a perception that there are more options available, but this may not necessarily be the case.</p></div><div style="display:contents" dir="auto"><p id="c8e25385-3a7e-44d0-b207-39feee9e261e" class="">It is important to recognize that these changes in relationship standards are not necessarily a bad thing. They reflect a desire for more equitable and fulfilling relationships. However, it is important to also acknowledge the challenges that men may face in navigating these changes.</p></div><div style="display:contents" dir="auto"><p id="e83ea2e7-1f83-4567-8bfa-41a8e650385f" class="">To address this issue, it is important to promote open communication and understanding between genders. Men should be encouraged to express their emotions and be vulnerable, without fear of judgment or rejection. Additionally, there should be a focus on creating more inclusive and empowering models of masculinity that celebrate diversity and individuality.</p></div><div style="display:contents" dir="auto"><p id="290e12e9-5d69-45e8-a137-c4ede5d8460c" class="">In conclusion, while there may be challenges for heterosexual men in the current dating landscape, it is important to work towards creating a more equitable and fulfilling relationship dynamic for all genders.</p></div><div style="display:contents" dir="auto"><p id="91373043-dd6c-40c9-8225-e6962c730433" class="">
+</p></div><div style="display:contents" dir="auto"><p id="2ae80053-55a3-4a12-b2e8-083d58f081bb" class=""><a href="https://www.psychologytoday.com/us/blog/the-state-our-unions/202208/whats-behind-the-rise-lonely-single-men">https://www.psychologytoday.com/us/blog/the-state-our-unions/202208/whats-behind-the-rise-lonely-single-men</a></p></div><div style="display:contents" dir="auto"><h3 id="ed52cbc9-02a3-4f82-a455-d2d3082bd269" class="">KEY POINTS</h3></div><div style="display:contents" dir="auto"><ul id="d30677cb-9a14-46b0-b520-94b46db51d21" class="bulleted-list"><li style="list-style-type:disc">Dating opportunities for heterosexual men are diminishing as relationship standards rise.</li></ul></div><div style="display:contents" dir="auto"><ul id="b0b0be42-a8c8-498f-86f1-93f62a2d35fc" class="bulleted-list"><li style="list-style-type:disc">Men represent approximately 62% of dating app users, lowering their chances for matches.</li></ul></div><div style="display:contents" dir="auto"><ul id="9061c731-3620-4f68-a59a-79f1bc49e7b4" class="bulleted-list"><li style="list-style-type:disc">Men need to address skills deficits to meet healthier relationship expectations.</li></ul></div><div style="display:contents" dir="auto"><ol type="1" id="8e219847-e14b-4d5c-875d-64aeb23b1525" class="numbered-list" start="1"><li>Dating Apps:</li></ol></div><div style="display:contents" dir="auto"><p id="15b786cd-a6fe-4e13-82f4-285ec02cfb70" class=""><a href="https://theswaddle.com/the-dishonesty-of-dating-apps/">dating apps</a> — somewhat accidentally — have been hugely responsible for the rise of lonely, single men. Most dating apps, like many other things, cater primarily to the male gaze. As The Guardian<a href="https://www.theguardian.com/commentisfree/2022/jan/27/why-do-dating-apps-bring-out-the-worst-in-men"> pointed out</a>, “apps like Tinder and Hinge give straight men unfettered access to women – and a new sense of boldness through a seemingly endless set of options.” However, since these apps heavily cater to the male gaze and male desires, they end up attracting men in much larger numbers than women. Matos points out that in most of these apps, “upwards of <a href="https://time.com/3711902/men-use-dating-apps-more-tinder/">62% of users are men</a> and many women are overwhelmed by the number of options they have.” As a result, “<a href="https://www.psychologytoday.com/us/basics/sport-and-competition">competition</a> in <a href="https://www.psychologytoday.com/us/basics/social-networking">online dating</a> is fierce, and lucky in-person chance encounters with dreamy partners are rarer than ever.” Men, then, are ironically left disadvantaged by the services that were catering to their gaze and desires. </p></div><div style="display:contents" dir="auto"><ol type="1" id="94760008-2099-4695-a8d4-3dcde1a3f82b" class="numbered-list" start="2"><li></li></ol></div><div style="display:contents" dir="auto"><p id="dd2486b7-3725-4216-a136-9964a9ffd769" class="">The rise of dating apps needs to be seen alongside <strong>updating cultural norms</strong>, which now allow women to reject men with greater confidence and ease than some years ago. The <strong>rise of </strong><strong><a href="https://www.cfr.org/blog/how-social-media-has-reshaped-feminism">feminist activism on the internet and in social media</a></strong>, has led to — even if marginal — increasing <strong>awareness among women about their right to fair and respectful treatment </strong>from the men around their lives, especially their partners. Increasing <strong>conversations about </strong><strong><a href="https://www.youtube.com/watch?v=f7M808vNQ34">potential dating “red flags”</a></strong><strong> </strong>(or warning signs), and a larger trend of documenting bad experiences, is also possibly responsible for making women more vigilant about their dating choices.</p></div><div style="display:contents" dir="auto"><p id="5cb76de0-d748-4db1-8a7b-b9cc0f82ef94" class="">As a result, <strong>relationship standards have slowly risen</strong>, and <strong>women’s dating choices</strong> have updated with the standards. Matos, based on his weekly TikTok interactions with women aged 25-45, <a href="https://www.psychologytoday.com/us/blog/the-state-our-unions/202208/whats-behind-the-rise-lonely-single-men">writes</a>, “they prefer men who are emotionally available, who are good communicators, and who share their values.”This provides men a real opportunity to build up their relationship skills to keep up with the changing times. The realization that <strong>women aren’t settling for less</strong>, and that <strong>women are seeking better partners out of men</strong>, could lead to a newer, different set of expectations from men, changing the existing heteronormative norms in place.</p></div><div style="display:contents" dir="auto"><p id="6d3d5d0a-3d0e-49b1-8f96-deec11e81b8c" class="">Disappointingly, however, <strong>men have failed to rise to the occasion.</strong> Instead of choosing to bridge their “relationship skills gap” — as Matos puts it — men have turned toward the <a href="https://theswaddle.com/looksmax-redpill-femoid-dissecting-incel-language-and-ideology/">incel ideology</a> in larger numbers, feeling a greater sense of entitlement over sex and women’s bodies. They have made it a matter of their appearance and inferiority instead of seriously considering changing with the times. The increasing number of single and lonely men, then, could potentially endanger all women.</p></div><div style="display:contents" dir="auto"><p id="b72b918c-8895-49c2-a3c7-21c94a469e38" class="">(…) As Jo Adetunji, Editor at The Conversation, <a href="https://theconversation.com/why-we-need-to-stop-talking-about-a-masculinity-crisis-88713">writes</a>: “the<strong> old-fashioned ideals of masculinity… can often only be achieved through predatory and sexist attitudes towards women</strong>. Sexism is a huge part of bonding among men who define themselves as heterosexual.” <strong>With work patterns changing and family dynamics changing, “many straight men find it hard to reconcile the traditional view of gender with the new approach based on partnership and equality of men and women</strong> at home and in work.”</p></div><div style="display:contents" dir="auto"><p id="0dad521b-d15e-4089-95b3-51562e1912ce" class=""> (<a href="https://theswaddle.com/a-straight-masculinity-crisis-is-underway-and-its-a-good-thing/">https://theswaddle.com/a-straight-masculinity-crisis-is-underway-and-its-a-good-thing/</a> )</p></div><div style="display:contents" dir="auto"><p id="9f36d34d-124f-44eb-8c82-20ed56a34395" class="">
+</p></div><div style="display:contents" dir="auto"><p id="ee37f5de-2088-499b-8f09-45ee13a5b8fa" class=""><a href="https://www.pewresearch.org/social-trends/2021/10/05/rising-share-of-u-s-adults-are-living-without-a-spouse-or-partner/#:~:text=A%20new%20Pew%20Research%20Center,the%20case%2030%20years%20ago">https://www.pewresearch.org/social-trends/2021/10/05/rising-share-of-u-s-adults-are-living-without-a-spouse-or-partner/#:~:text=A new Pew Research Center,the case 30 years ago</a>.</p></div><div style="display:contents" dir="auto"><p id="c91c7882-e57e-4bbe-a21d-a2663a50d40e" class="">A new Pew Research Center analysis of census data finds that in 2019, roughly four-in-ten adults ages<strong> 25 to 54 (38%) were unpartnered</strong> – that is, neither married nor living with a partner.<a href="https://www.pewresearch.org/social-trends/2021/10/05/rising-share-of-u-s-adults-are-living-without-a-spouse-or-partner/#fn-31655-1">1</a> This share is up sharply from 29% in 1990.<a href="https://www.pewresearch.org/social-trends/2021/10/05/rising-share-of-u-s-adults-are-living-without-a-spouse-or-partner/#fn-31655-2">2</a><strong> Men are now more likely than women to be unpartnered, which wasn’t the case 30 years ago.</strong></p></div><div style="display:contents" dir="auto"><p id="6dd25262-52b6-4ae3-985a-4497e7752dde" class="">The growth in the single population is driven mainly by the<strong> </strong><strong><a href="https://www.pewresearch.org/social-trends/2019/11/06/marriage-and-cohabitation-in-the-u-s/">decline in marriage</a></strong> among adults who are at prime working age. At the same time, there has been a rise in the share who are cohabiting, but it hasn’t been enough to offset the drop in marriage – hence the <strong>overall decline in partnership</strong>. While the unpartnered population includes some adults who were previously married (those who are separated, divorced or widowed), all of the growth in the unpartnered population since 1990 has come from a rise in the number who have never been married.</p></div><div style="display:contents" dir="auto"><p id="8f8bb667-43eb-486a-9842-25cd91d38358" class="">This trend has broad societal implications, as does the <strong>growing gap in well-being between partnered and unpartnered adults.</strong> Looking across a range of measures of economic and social status, unpartnered adults generally have different – often worse – outcomes than those who are married or cohabiting. This pattern is apparent among both men and women. Unpartnered adults have lower earnings, on average, than partnered adults and are less likely to be employed or economically independent. They also have lower educational attainment and are more likely to live with their parents. Other research suggests that married and cohabiting adults fare better than those who are unpartnered when it comes to some <a href="https://link.springer.com/article/10.1007/s11113-018-9467-3">health outcomes</a>.</p></div><div style="display:contents" dir="auto"><p id="a942a0b4-dd01-4493-a6c8-786592f064b9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="3232573d-f474-42d3-a60d-a0071cd9161f" class="">You are an expert in social science. What are the consequences for men and traditional masculine values in the modern world of dating and mating in an interconnected world after the shift in gender dynamics and a prevelant feminist movement today. (ChatGPT prompt)</p></div><div style="display:contents" dir="auto"><p id="f110b4b8-1f56-4ec1-b17a-aca23997e30c" class="">In the modern world of dating and mating, there have been significant shifts in gender dynamics and the prevalence of feminist movements. These changes have had consequences for both men and traditional masculine values. While it is important to note that experiences and perspectives can vary widely among individuals and across cultures, here are some general observations on the topic:</p></div><div style="display:contents" dir="auto"><ol type="1" id="5becf22a-ae8c-4f8d-b63a-8f52f36678db" class="numbered-list" start="1"><li>Changing Gender Roles: Traditional gender roles, which often placed men in dominant and assertive positions in relationships, have been challenged. As women have gained more rights and opportunities, they have increasingly sought equal partnership and shared decision-making in relationships. This shift has required men to adapt their roles and expectations, leading to a renegotiation of power dynamics within relationships.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="61704357-4c5b-4baf-96c7-57204e76e9f0" class="numbered-list" start="2"><li>Evolving Expectations: With greater gender equality, there has been a growing emphasis on emotional intelligence, communication skills, and respect for consent in intimate relationships. Traditional masculine values that prioritize stoicism, dominance, and aggression may be viewed as outdated or even problematic by some individuals. Men who embrace these values exclusively may find it challenging to navigate modern dating dynamics.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="bdc9c894-481b-449f-8246-86cc54fd8113" class="numbered-list" start="3"><li>Increased Diversity and Individual Preferences: The interconnectedness of the world has exposed people to a wide range of cultural values and perspectives. This has contributed to a more pluralistic understanding of relationships and a recognition that there are multiple ways to express masculinity and femininity. As a result, traditional masculine values are being redefined and expanded to accommodate diverse preferences and identities.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="800f998d-c46a-4ab6-90c3-938adde79fde" class="numbered-list" start="4"><li>Male Insecurities and Pressures: The changing dynamics in dating and mating can sometimes lead to insecurities and pressures for men. Some men may feel uncertain about how to navigate the evolving landscape of relationships, leading to anxiety, self-doubt, and difficulties in forming connections. Societal expectations and stereotypes around masculinity can also create pressures to conform, which may have negative consequences on mental health and self-esteem.</li></ol></div><div style="display:contents" dir="auto"><ol type="1" id="769812f5-ecc2-44e6-b5a7-058cfbbfc1dd" class="numbered-list" start="5"><li>Positive Changes and New Opportunities: Despite the challenges, the shift in gender dynamics and feminist movements have also brought positive changes for men. They have encouraged healthier relationships based on mutual respect, communication, and shared responsibilities. Men are increasingly encouraged to express vulnerability, develop emotional intelligence, and engage in open dialogue about consent and boundaries. These changes offer new opportunities for personal growth, deeper connections, and more satisfying relationships.</li></ol></div><div style="display:contents" dir="auto"><p id="21e34452-169a-4419-8fc6-396374f341f9" class="">It is crucial to note that these consequences are not universal, and individuals&#x27; experiences and perspectives may differ significantly. The impact of gender dynamics on dating and mating is complex and influenced by various factors, including cultural, social, and individual contexts.</p></div><div style="display:contents" dir="auto"><p id="44eaa4e4-8281-423f-b296-39822756e2c9" class="">
+</p></div><div style="display:contents" dir="auto"><p id="32793578-5045-42d9-b6a1-4135c914c0fb" class="">Prof. Galloway (US, Insta snippets):</p></div><div style="display:contents" dir="auto"><ul id="594aa2c0-4c54-4918-9e06-e645db3769b3" class="bulleted-list"><li style="list-style-type:disc">The bottom half (of average attractiveness) of men on Tinder you have to swipe 200x to get a dates/ a match (investigate): Confirmation they have less/ no value</li></ul></div><div style="display:contents" dir="auto"><ul id="aa171c92-779b-4f66-93d1-0f5df873dd0c" class="bulleted-list"><li style="list-style-type:disc">Women match only: 3-5% of all men (confirm stats)</li></ul></div><div style="display:contents" dir="auto"><ul id="f2e9c2c4-897f-47db-b1b0-6dfd2c2b4c56" class="bulleted-list"><li style="list-style-type:disc">Educations system discriminates them: Boys are twice as likely to be suspended for the exact same behaviour as girls (at school) - Black boys: 5x higher!</li></ul></div><div style="display:contents" dir="auto"><ul id="4e1c444f-5525-4aa0-b9fe-a674bf35c828" class="bulleted-list"><li style="list-style-type:disc">Mating dynamics are different for men and women: 75% of women that economic viability is important / only 25% of men care for economics/ money in women</li></ul></div><div style="display:contents" dir="auto"><ul id="6006495c-0de7-4580-99e6-803fa558318f" class="bulleted-list"><li style="list-style-type:disc">Women mate horizontally and up (they’re looking for a man with similar or higher income!) vs. men mate horizontally and down </li></ul></div><div style="display:contents" dir="auto"><p id="40d950a2-c409-4779-94d0-8ab4f23ec610" class="">—&gt; Results in a lack of household formation and frustrated, young, broke, single (lonely) boys/ young men</p></div><div style="display:contents" dir="auto"><ul id="4524fcb6-481b-4ff7-a89c-441832fdbc51" class="bulleted-list"><li style="list-style-type:disc">The number 1 indicator for suicide in teen boys is a fatherless home</li></ul></div><div style="display:contents" dir="auto"><ul id="91d664f1-7b66-41f3-807d-1f58649e39c4" class="bulleted-list"><li style="list-style-type:disc">70% of incarcerated men had a fatherless home</li></ul></div><div style="display:contents" dir="auto"><p id="a9c35fff-b4da-439d-b7fd-2b42b1649799" class="">
+</p></div><div style="display:contents" dir="auto"><p id="8fa4f2b8-c42e-4e4e-b50b-814110c0b15f" class="">
+</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

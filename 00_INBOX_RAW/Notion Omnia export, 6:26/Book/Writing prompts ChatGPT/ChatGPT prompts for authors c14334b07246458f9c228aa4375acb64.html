@@ -1,0 +1,744 @@
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"/><title>ChatGPT prompts for authors</title><style>
+/* cspell:disable-file */
+/* webkit printing magic: print all background colors */
+html {
+	-webkit-print-color-adjust: exact;
+}
+* {
+	box-sizing: border-box;
+	-webkit-print-color-adjust: exact;
+}
+
+html,
+body {
+	margin: 0;
+	padding: 0;
+}
+@media only screen {
+	body {
+		margin: 2em auto;
+		max-width: 900px;
+		color: rgb(55, 53, 47);
+	}
+}
+
+body {
+	line-height: 1.5;
+	white-space: pre-wrap;
+}
+
+a,
+a.visited {
+	color: inherit;
+	text-decoration: underline;
+}
+
+.pdf-relative-link-path {
+	font-size: 80%;
+	color: #444;
+}
+
+h1,
+h2,
+h3 {
+	letter-spacing: -0.01em;
+	line-height: 1.2;
+	font-weight: 600;
+	margin-bottom: 0;
+}
+
+/* Override strong tags inside headings to maintain consistent weight */
+h1 strong,
+h2 strong,
+h3 strong {
+	font-weight: 600;
+}
+
+.page-title {
+	font-size: 2.5rem;
+	font-weight: 700;
+	margin-top: 0;
+	margin-bottom: 0.75em;
+}
+
+h1 {
+	font-size: 1.875rem;
+	margin-top: 1.875rem;
+}
+
+h2 {
+	font-size: 1.5rem;
+	margin-top: 1.5rem;
+}
+
+h3 {
+	font-size: 1.25rem;
+	margin-top: 1.25rem;
+}
+
+.source {
+	border: 1px solid #ddd;
+	border-radius: 3px;
+	padding: 1.5em;
+	word-break: break-all;
+}
+
+.callout {
+	border-radius: 10px;
+	padding: 1rem;
+}
+
+figure {
+	margin: 1.25em 0;
+	page-break-inside: avoid;
+}
+
+figcaption {
+	opacity: 0.5;
+	font-size: 85%;
+	margin-top: 0.5em;
+}
+
+mark {
+	background-color: transparent;
+}
+
+.indented {
+	padding-left: 1.5em;
+}
+
+hr {
+	background: transparent;
+	display: block;
+	width: 100%;
+	height: 1px;
+	visibility: visible;
+	border: none;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+img {
+	max-width: 100%;
+}
+
+@media only print {
+	img {
+		max-height: 100vh;
+		object-fit: contain;
+	}
+
+	table.collection-content {
+		width: 100%;
+		table-layout: fixed;
+	}
+
+	table.collection-content th,
+	table.collection-content td {
+		overflow-wrap: anywhere;
+	}
+
+	table.collection-content td > .user,
+	table.collection-content td > time {
+		white-space: pre-wrap;
+	}
+}
+
+@page {
+	margin: 1in;
+}
+
+.collection-content-wrapper {
+	overflow-x: auto;
+}
+
+@media only print {
+	.collection-content-wrapper {
+		overflow-x: visible;
+	}
+}
+
+.collection-content {
+	font-size: 0.875rem;
+}
+
+.collection-content td {
+	white-space: pre-wrap;
+	word-break: break-word;
+}
+
+.column-list {
+	display: flex;
+	gap: 46px;
+}
+
+.column {
+	min-width: 0;
+	overflow: hidden;
+}
+
+.column > *:first-child {
+	margin-top: 0;
+}
+
+.table_of_contents-item {
+	display: block;
+	font-size: 0.875rem;
+	line-height: 1.3;
+	padding: 0.125rem;
+}
+
+.table_of_contents-indent-1 {
+	margin-left: 1.5rem;
+}
+
+.table_of_contents-indent-2 {
+	margin-left: 3rem;
+}
+
+.table_of_contents-indent-3 {
+	margin-left: 4.5rem;
+}
+
+.table_of_contents-link {
+	text-decoration: none;
+	opacity: 0.7;
+	border-bottom: 1px solid rgba(55, 53, 47, 0.18);
+}
+
+table,
+th,
+td {
+	border: 1px solid rgba(55, 53, 47, 0.09);
+}
+
+table {
+	border-collapse: collapse;
+	border-left: none;
+	border-right: none;
+}
+
+th,
+td {
+	font-weight: normal;
+	padding: 0.25em 0.5em;
+	line-height: 1.5;
+	min-height: 1.5em;
+	text-align: left;
+}
+
+th {
+	color: rgba(55, 53, 47, 0.6);
+}
+
+ol,
+ul {
+	margin: 0;
+	margin-block-start: 0.6em;
+	margin-block-end: 0.6em;
+}
+
+li > ol:first-child,
+li > ul:first-child {
+	margin-block-start: 0.6em;
+}
+
+ul > li {
+	list-style: disc;
+}
+
+ul.to-do-list {
+	padding-inline-start: 0;
+}
+
+ul.to-do-list > li {
+	list-style: none;
+}
+
+.to-do-children-checked {
+	text-decoration: line-through;
+	opacity: 0.375;
+}
+
+ul.toggle > li {
+	list-style: none;
+}
+
+ul {
+	padding-inline-start: 1.7em;
+}
+
+ul > li {
+	padding-left: 0.1em;
+}
+
+ol {
+	padding-inline-start: 1.6em;
+}
+
+ol.numbered-list.numbered-list-digits-2 {
+	padding-inline-start: 2em;
+}
+
+ol.numbered-list.numbered-list-digits-3plus {
+	padding-inline-start: 2.4em;
+}
+
+ol > li {
+	padding-left: 0.2em;
+}
+
+.mono ol {
+	padding-inline-start: 2em;
+}
+
+.mono ol > li {
+	text-indent: -0.4em;
+}
+
+.toggle {
+	padding-inline-start: 0em;
+	list-style-type: none;
+}
+
+/* Indent toggle children */
+.toggle > li > details {
+	padding-left: 1.7em;
+}
+
+.toggle > li > details > summary {
+	margin-left: -1.1em;
+}
+
+.selected-value {
+	display: inline-block;
+	padding: 0 0.5em;
+	background: rgba(206, 205, 202, 0.5);
+	border-radius: 3px;
+	margin-right: 0.5em;
+	margin-top: 0.3em;
+	margin-bottom: 0.3em;
+	white-space: nowrap;
+}
+
+.collection-title {
+	display: inline-block;
+	margin-right: 1em;
+}
+
+.page-description {
+	margin-bottom: 2em;
+}
+
+.simple-table {
+	margin-top: 1em;
+	font-size: 0.875rem;
+	empty-cells: show;
+}
+.simple-table td {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table th {
+	height: 29px;
+	min-width: 120px;
+}
+
+.simple-table-header-color {
+	background: rgb(247, 246, 243);
+	color: black;
+}
+.simple-table-header {
+	font-weight: 500;
+}
+
+time {
+	opacity: 0.5;
+}
+
+.icon {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	max-width: 1.2em;
+	max-height: 1.2em;
+	text-decoration: none;
+	vertical-align: text-bottom;
+	margin-right: 0.5em;
+}
+
+img.icon {
+	border-radius: 3px;
+}
+
+.callout img.notion-static-icon {
+	width: 1em;
+	height: 1em;
+}
+
+.callout p {
+	margin: 0;
+}
+
+.callout h1,
+.callout h2,
+.callout h3 {
+	margin: 0 0 0.6rem;
+}
+
+.user-icon {
+	width: 1.5em;
+	height: 1.5em;
+	border-radius: 100%;
+	margin-right: 0.5rem;
+}
+
+.user-icon-inner {
+	font-size: 0.8em;
+}
+
+.text-icon {
+	border: 1px solid #000;
+	text-align: center;
+}
+
+.page-cover-image {
+	display: block;
+	object-fit: cover;
+	width: 100%;
+	max-height: 30vh;
+}
+
+.page-header-icon {
+	font-size: 3rem;
+	margin-bottom: 1rem;
+}
+
+.page-header-icon-with-cover {
+	margin-top: -0.72em;
+	margin-left: 0.07em;
+}
+
+.page-header-icon img {
+	border-radius: 3px;
+}
+
+.link-to-page {
+	margin: 1em 0;
+	padding: 0;
+	border: none;
+	font-weight: 500;
+}
+
+p > .user {
+	opacity: 0.5;
+}
+
+td > .user,
+td > time {
+	white-space: nowrap;
+}
+
+input[type="checkbox"] {
+	transform: scale(1.5);
+	margin-right: 0.6em;
+	vertical-align: middle;
+}
+
+p {
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+}
+
+.image {
+	border: none;
+	margin: 1.5em 0;
+	padding: 0;
+	border-radius: 0;
+	text-align: center;
+}
+
+.code,
+code {
+	background: rgba(135, 131, 120, 0.15);
+	border-radius: 3px;
+	padding: 0.2em 0.4em;
+	border-radius: 3px;
+	font-size: 85%;
+	tab-size: 2;
+}
+
+code {
+	color: #eb5757;
+}
+
+.code {
+	padding: 1.5em 1em;
+}
+
+.code-wrap {
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+.code > code {
+	background: none;
+	padding: 0;
+	font-size: 100%;
+	color: inherit;
+}
+
+blockquote {
+	font-size: 1em;
+	margin: 1em 0;
+	padding-left: 1em;
+	border-left: 3px solid rgb(55, 53, 47);
+}
+
+blockquote.quote-large {
+	font-size: 1.25em;
+}
+
+.bookmark {
+	text-decoration: none;
+	max-height: 8em;
+	padding: 0;
+	display: flex;
+	width: 100%;
+	align-items: stretch;
+}
+
+.bookmark-title {
+	font-size: 0.85em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	height: 1.75em;
+	white-space: nowrap;
+}
+
+.bookmark-text {
+	display: flex;
+	flex-direction: column;
+}
+
+.bookmark-info {
+	flex: 4 1 180px;
+	padding: 12px 14px 14px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.bookmark-image {
+	width: 33%;
+	flex: 1 1 180px;
+	display: block;
+	position: relative;
+	object-fit: cover;
+	border-radius: 1px;
+}
+
+.bookmark-description {
+	color: rgba(55, 53, 47, 0.6);
+	font-size: 0.75em;
+	overflow: hidden;
+	max-height: 4.5em;
+	word-break: break-word;
+}
+
+.bookmark-href {
+	font-size: 0.75em;
+	margin-top: 0.25em;
+}
+
+.sans { font-family: ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol"; }
+.code { font-family: "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace; }
+.serif { font-family: Lyon-Text, Georgia, ui-serif, serif; }
+.mono { font-family: iawriter-mono, Nitti, Menlo, Courier, monospace; }
+.pdf .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK JP'; }
+.pdf:lang(zh-CN) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK SC'; }
+.pdf:lang(zh-TW) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK TC'; }
+.pdf:lang(ko-KR) .sans { font-family: Inter, ui-sans-serif, -apple-system, BlinkMacSystemFont, "Segoe UI Variable Display", "Segoe UI", Helvetica, "Apple Color Emoji", "Noto Sans Arabic", "Noto Sans Hebrew", Arial, sans-serif, "Segoe UI Emoji", "Segoe UI Symbol", 'Twemoji', 'Noto Color Emoji', 'Noto Sans CJK KR'; }
+.pdf .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .code { font-family: Source Code Pro, "SFMono-Regular", Menlo, Consolas, "PT Mono", "Liberation Mono", Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.pdf .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK JP'; }
+.pdf:lang(zh-CN) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK SC'; }
+.pdf:lang(zh-TW) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK TC'; }
+.pdf:lang(ko-KR) .serif { font-family: PT Serif, Lyon-Text, Georgia, ui-serif, serif, 'Twemoji', 'Noto Color Emoji', 'Noto Serif CJK KR'; }
+.pdf .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK JP'; }
+.pdf:lang(zh-CN) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK SC'; }
+.pdf:lang(zh-TW) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK TC'; }
+.pdf:lang(ko-KR) .mono { font-family: PT Mono, iawriter-mono, Nitti, Menlo, Courier, monospace, 'Twemoji', 'Noto Color Emoji', 'Noto Sans Mono CJK KR'; }
+.highlight-default {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.highlight-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.highlight-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.highlight-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.highlight-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.highlight-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.highlight-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.highlight-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.highlight-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.highlight-default_background {
+	color: rgba(44, 44, 43, 1);
+}
+.highlight-gray_background {
+	background: rgba(42, 28, 0, 0.07);
+}
+.highlight-brown_background {
+	background: rgba(139, 46, 0, 0.086);
+}
+.highlight-orange_background {
+	background: rgba(224, 101, 1, 0.129);
+}
+.highlight-yellow_background {
+	background: rgba(211, 168, 0, 0.137);
+}
+.highlight-teal_background {
+	background: rgba(0, 100, 45, 0.09);
+}
+.highlight-blue_background {
+	background: rgba(0, 124, 215, 0.094);
+}
+.highlight-purple_background {
+	background: rgba(102, 0, 178, 0.078);
+}
+.highlight-pink_background {
+	background: rgba(197, 0, 93, 0.086);
+}
+.highlight-red_background {
+	background: rgba(223, 22, 0, 0.094);
+}
+.block-color-default {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray {
+	color: rgba(125, 122, 117, 1);
+	fill: rgba(125, 122, 117, 1);
+}
+.block-color-brown {
+	color: rgba(159, 118, 90, 1);
+	fill: rgba(159, 118, 90, 1);
+}
+.block-color-orange {
+	color: rgba(210, 123, 45, 1);
+	fill: rgba(210, 123, 45, 1);
+}
+.block-color-yellow {
+	color: rgba(203, 148, 52, 1);
+	fill: rgba(203, 148, 52, 1);
+}
+.block-color-teal {
+	color: rgba(80, 148, 110, 1);
+	fill: rgba(80, 148, 110, 1);
+}
+.block-color-blue {
+	color: rgba(56, 125, 201, 1);
+	fill: rgba(56, 125, 201, 1);
+}
+.block-color-purple {
+	color: rgba(154, 107, 180, 1);
+	fill: rgba(154, 107, 180, 1);
+}
+.block-color-pink {
+	color: rgba(193, 76, 138, 1);
+	fill: rgba(193, 76, 138, 1);
+}
+.block-color-red {
+	color: rgba(207, 81, 72, 1);
+	fill: rgba(207, 81, 72, 1);
+}
+.block-color-default_background {
+	color: inherit;
+	fill: inherit;
+}
+.block-color-gray_background {
+	background: rgba(240, 239, 237, 1);
+}
+.block-color-brown_background {
+	background: rgba(245, 237, 233, 1);
+}
+.block-color-orange_background {
+	background: rgba(251, 235, 222, 1);
+}
+.block-color-yellow_background {
+	background: rgba(249, 243, 220, 1);
+}
+.block-color-teal_background {
+	background: rgba(232, 241, 236, 1);
+}
+.block-color-blue_background {
+	background: rgba(229, 242, 252, 1);
+}
+.block-color-purple_background {
+	background: rgba(243, 235, 249, 1);
+}
+.block-color-pink_background {
+	background: rgba(250, 233, 241, 1);
+}
+.block-color-red_background {
+	background: rgba(252, 233, 231, 1);
+}
+.select-value-color-default { background-color: rgba(42, 28, 0, 0.07); }
+.select-value-color-gray { background-color: rgba(28, 19, 1, 0.11); }
+.select-value-color-brown { background-color: rgba(127, 51, 0, 0.156); }
+.select-value-color-orange { background-color: rgba(196, 88, 0, 0.203); }
+.select-value-color-yellow { background-color: rgba(209, 156, 0, 0.282); }
+.select-value-color-green { background-color: rgba(0, 96, 38, 0.156); }
+.select-value-color-blue { background-color: rgba(0, 118, 217, 0.203); }
+.select-value-color-purple { background-color: rgba(92, 0, 163, 0.141); }
+.select-value-color-pink { background-color: rgba(183, 0, 78, 0.152); }
+.select-value-color-red { background-color: rgba(206, 24, 0, 0.164); }
+
+.checkbox {
+	display: inline-flex;
+	vertical-align: text-bottom;
+	width: 16;
+	height: 16;
+	background-size: 16px;
+	margin-left: 2px;
+	margin-right: 5px;
+}
+
+.checkbox-on {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20width%3D%2216%22%20height%3D%2216%22%20fill%3D%22%2358A9D7%22%2F%3E%0A%3Cpath%20d%3D%22M6.71429%2012.2852L14%204.9995L12.7143%203.71436L6.71429%209.71378L3.28571%206.2831L2%207.57092L6.71429%2012.2852Z%22%20fill%3D%22white%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+
+.checkbox-off {
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20width%3D%2216%22%20height%3D%2216%22%20viewBox%3D%220%200%2016%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Crect%20x%3D%220.75%22%20y%3D%220.75%22%20width%3D%2214.5%22%20height%3D%2214.5%22%20fill%3D%22white%22%20stroke%3D%22%2336352F%22%20stroke-width%3D%221.5%22%2F%3E%0A%3C%2Fsvg%3E");
+}
+	
+</style></head><body><article id="c14334b0-7246-458f-9c22-8aa4375acb64" class="page sans"><header><h1 class="page-title" dir="auto">ChatGPT prompts for authors</h1><p class="page-description" dir="auto"></p></header><div class="page-body"><div style="display:contents" dir="auto"><p id="c2bcd2e8-e176-412b-88e8-2971c8aa7244" class=""><a href="https://thejohnfox.com/2023/04/26-ways-novelists-can-use-chatgpt/">https://thejohnfox.com/2023/04/26-ways-novelists-can-use-chatgpt/</a></p></div><div style="display:contents" dir="auto"><h1 id="0d8e773f-82ff-48f3-b1c1-521efa5d5fab" class=""><strong>ASK CHATGPT FOR STORY IDEAS</strong></h1></div><div style="display:contents" dir="auto"><p id="638caa4c-5a9f-4b43-a37d-c4fa658b3f51" class="">You probably already have an idea for your novel, but if you don’t, you could ask AI for fifty novel ideas in the Sci-fi genre that includes aliens.</p></div><div style="display:contents" dir="auto"><p id="aa1aafe7-02d6-4857-bbd7-2ca3e3e66d60" class="">Here is a sample prompt:</p></div><div style="display:contents" dir="auto"><p id="b094a5be-f045-4baa-a621-7f7f1a7c4ccc" class=""><em>I am writing a romance novel that takes places in Huntington Beach, California. The main character is a newspaper reporter who has insomnia. She needs to be investigating a series of four grisly murders that happened within the last three months. Tell me how those murders happened, why this reporter is interested in the case, give me five suspects, and then tell me who is the murderer.</em></p></div><div style="display:contents" dir="auto"><p id="e3b4c235-fee0-4828-a613-735275e37e16" class="">
+</p></div><div style="display:contents" dir="auto"><p id="71eb7fa9-2e12-4220-a387-7eea5c4162fa" class=""><a href="https://www.thinkific.com/blog/ai-to-write-a-book/">https://www.thinkific.com/blog/ai-to-write-a-book</a></p></div><div style="display:contents" dir="auto"><h2 id="55869d70-ad48-4e94-b132-cdb6d54fd2bb" class=""><strong>Overview of the main ways that authors can use ChatGPT</strong></h2></div><div style="display:contents" dir="auto"><p id="1b220454-3a3b-474f-9866-8b4bb145a144" class="">ChatGPT can assist in various aspects of the writing process, from idea generation to plot development and character design. It can provide story prompts, help structure your novel, or create dialogue for your characters.</p></div><div style="display:contents" dir="auto"><p id="5b7dd310-9b87-43a9-b778-5d3f04fadc95" class=""><strong>Example prompt to generate a book outline:</strong></p></div><div style="display:contents" dir="auto"><p id="56271c1c-81aa-4a4e-85a5-eab3bb8de049" class="">Your task is to create a detailed outline for my next book titled [Book Title]. The book is aimed at [Target Audience].</p></div><div style="display:contents" dir="auto"><p id="9346ef05-678c-47c4-8893-4ff8566b86e2" class="">The themes for this book are [Theme 1, Theme 2, Theme 3].Here are some key elements this book should incorporate: [Element 1, Element 2, Element 3].Please create a detailed book outline including the following sections:Title: [Book Title]Themes: As stated aboveKey elements: As stated aboveBook description: Detailed description of the book covering the themes and key elementsWriting plan: Steps to write the bookPublication strategy: How to publish and promote the book</p></div><div style="display:contents" dir="auto"><p id="0f08516b-dcf1-41a9-9c7d-231533cd5385" class=""><strong>Here are some more usecases:</strong></p></div><div style="display:contents" dir="ltr"><table id="fdd94302-b314-448c-b2e7-73cce9563e3e" class="simple-table"><tbody><div style="display:contents" dir="ltr"><tr id="68998cd2-9131-40d0-b016-ae3d8de5772f"><td id="_yc]" class=""><strong>Use case</strong></td><td id="?PJJ" class=""><strong>Example prompt</strong></td></tr></div><div style="display:contents" dir="ltr"><tr id="afc99092-1800-421c-b7f0-3be35a319d2c"><td id="_yc]" class=""><strong>1. Generating a book outline</strong><br/><br/>Authors can use AI to structure their book’s main points and chapters. This helps maintain consistency and flow throughout the book. Inputs: Book genre, premise, number of chapters</td><td id="?PJJ" class="">You are an expert in [historical fiction] writing. Generate a book outline based on the premise: [A young woman discovering her magical abilities in Victorian England]. The book should have [20] chapters.</td></tr></div><div style="display:contents" dir="ltr"><tr id="963e9e46-0fab-4968-8314-35da49ed1342"><td id="_yc]" class=""><strong>2. Chapters and sections</strong><br/><br/>AI can help authors organize their chapters and sections effectively. This contributes to a more organized writing process. Inputs: Chapter number, main events, setting</td><td id="?PJJ" class="">You are an expert at structuring novel chapters. For chapter [5] of a [fantasy novel], outline the main events that should occur when the protagonist [enters a mythical forest].</td></tr></div><div style="display:contents" dir="ltr"><tr id="541f6227-036d-4d07-9cf1-5131c643a840"><td id="_yc]" class=""><strong>3. Plot development</strong><br/><br/>AI can assist authors in developing their plot. This ensures a compelling and coherent storyline. Inputs: Character names, plot events, climax, resolution</td><td id="?PJJ" class="">You are a plot development expert. For the story about [Alice], a [young detective], describe how the plot should unfold after she discovers a [mysterious letter], leading up to the climax and resolution.</td></tr></div><div style="display:contents" dir="ltr"><tr id="651d4526-babb-439b-8e9b-7bca72e95387"><td id="_yc]" class=""><strong>4. Establishing scene / setting</strong><br/><br/>AI can help authors create vivid and engaging settings. This enhances the reader’s immersion. Inputs: Setting location, time, characters involved</td><td id="?PJJ" class="">You are an expert in creating immersive settings. Describe a [haunting, abandoned mansion] at [midnight] where the main character, [James], will find an important clue.</td></tr></div><div style="display:contents" dir="ltr"><tr id="6447675b-834f-4689-807c-1f5a020f4b5a"><td id="_yc]" class=""><strong>5. Publisher outreach</strong><br/><br/>AI can assist authors in drafting outreach emails to publishers. This saves time and increases the chances of getting a positive response. Inputs: Author’s name, book title, book genre, brief book description</td><td id="?PJJ" class="">You are an expert in crafting compelling outreach letters. Write an email on behalf of [Author’s Name] for their [book title] which is a [book genre]. The book is about [brief book description].</td></tr></div></tbody></table></div><div style="display:contents" dir="auto"><h2 id="f474ad65-a381-45e1-81ed-a95efb254863" class=""><strong>Idea generation</strong></h2></div><div style="display:contents" dir="auto"><p id="7b807bdb-6ade-4fa1-85fd-3ed44792f345" class=""><em>Task: Brainstorming ideas for a new book</em></p></div><div style="display:contents" dir="auto"><p id="e5c02ffd-c425-49e8-8781-6a8ab2a81a1e" class="">Is this the end of writer’s block? ChatGPT can help authors brainstorm ideas, create unique plotlines, and develop intriguing characters for their books.</p></div><div style="display:contents" dir="auto"><p id="f7a12e73-e1d6-4f22-be39-9c94e90f5a66" class=""><strong>Here are a few example prompts you can use:</strong></p></div><div style="display:contents" dir="auto"><ul id="ccd519ee-34e5-4129-857c-74a41d1d0d43" class="bulleted-list"><li style="list-style-type:disc">You’re an AI specialized in generating creative ideas for books. Let’s brainstorm ideas for a new [science fiction novel]. Please suggest a few themes or settings you’re interested in exploring.</li></ul></div><div style="display:contents" dir="auto"><ul id="3318f362-53eb-4513-8bdd-3482850bd90c" class="bulleted-list"><li style="list-style-type:disc">You are a creative engine that helps authors in ideating new book concepts. Generate a unique premise for a [mystery novel] set in [Victorian England].</li></ul></div><div style="display:contents" dir="auto"><ul id="629ea940-bb35-4506-9c10-efa55ad62ca8" class="bulleted-list"><li style="list-style-type:disc">As an AI, you’re trained to create fascinating plotlines. Based on the theme of [time travel], generate three interesting plot twists that could take place in a [thriller novel].</li></ul></div><div style="display:contents" dir="auto"><h2 id="ba6981ea-54f3-49e3-8020-8d3fd18862c6" class=""><strong>Character development</strong></h2></div><div style="display:contents" dir="auto"><p id="173f3e51-f076-41a8-84db-80d9de1a003c" class=""><em>Task: Developing detailed characters for a book</em></p></div><div style="display:contents" dir="auto"><p id="f2b26e9e-814f-4d52-854c-a4708f48cd8a" class="">ChatGPT can also help authors increase the depth of characters by suggesting their traits, backstories, and motivations.</p></div><div style="display:contents" dir="auto"><p id="460df0b1-ff86-4195-a559-d7fce6ef6a6d" class=""><strong>Here are a few example prompts you can use:</strong></p></div><div style="display:contents" dir="auto"><p id="cf0efffb-43cd-43d3-8508-a5e2e560093c" class="">1. You are a character development expert. Create a detailed profile for a [female detective] in a [crime thriller], including her backstory, personality traits, and motivations.<br/>2. As an AI specialized in character development, create a compelling backstory for a [young wizard] in a [fantasy novel] based on the themes of [loss and resilience].<br/>3. Given the character’s role as a [villain] in a [superhero story], provide three unique character traits and motivations that would make him compelling to readers.</p></div><div style="display:contents" dir="auto"><h2 id="ece146e3-a257-4e18-a952-6351e4060c00" class=""><strong>Dialogue refinement</strong></h2></div><div style="display:contents" dir="auto"><p id="abbc47a9-558f-46d8-a950-a243df9d3bc3" class=""><em>Task: Refining dialogue between characters</em></p></div><div style="display:contents" dir="auto"><p id="e6582833-37ef-41a8-9e0c-84ec13426c99" class="">It might seem counterintuitive, but ChatGPT can help make dialogue feel more human. If you’re struggling to create authentic-sounding interactions between characters, try using AI as a starting point and then trust your own humanity to refine the outputs.</p></div><div style="display:contents" dir="auto"><p id="edb8e92a-7f8d-42e8-8f66-264caa10f562" class="">1. You are an expert in crafting dialogue. Create a conversation between a [rebellious teenager] and a [strict teacher] discussing the student’s poor performance at [school].<br/>2. As an AI trained in dialogue refinement, generate an intense argument between two characters: a [jealous sibling] and an [overachieving sibling].<br/>3. Create a heartfelt conversation between a [mother] and [daughter] where the mother reveals a [deep family secret].</p></div><div style="display:contents" dir="auto"><h2 id="470abc30-49fd-421f-9cfd-c2265b3dff9f" class=""><strong>Plot troubleshooting</strong></h2></div><div style="display:contents" dir="auto"><p id="30e561dd-70b8-4268-bc80-3773992352c7" class=""><em>Task: Resolving plot inconsistencies or gaps</em></p></div><div style="display:contents" dir="auto"><p id="362178e8-042b-4c35-a5a1-a18fab1771f3" class="">Tired of changing your plot in an attempt to make everything make sense? ChatGPT can help you identify and resolve plot inconsistencies, making your stories more believable and helping with flow.</p></div><div style="display:contents" dir="auto"><p id="02f0c504-5cdf-4bee-b907-012e3a9d73c0" class=""><strong>Here are a few example prompts you can use:</strong></p></div><div style="display:contents" dir="auto"><p id="5855be13-bf7f-4b5e-a181-6b7a7493f742" class="">1. You are an expert in resolving plot issues. Help me solve this inconsistency in my [fantasy novel]: The protagonist can [travel through time], but I’ve written a scene where they’re [trapped in the past]. How can I resolve this?<br/>2. As an AI trained in plot troubleshooting, suggest three possible solutions to this problem in my [mystery novel]: The detective finds a [clue] at the crime scene that [doesn’t match any of the suspects].<br/>3. Given that my [sci-fi novel] involves [interstellar travel], how can I address the issue of time dilation without confusing readers?</p></div><div style="display:contents" dir="auto"><h2 id="febd62a1-61fe-411a-a6bc-5b53acde1e52" class=""><strong>Worldbuilding assistance</strong></h2></div><div style="display:contents" dir="auto"><p id="fbcc0d99-7cfb-4a94-a883-7dcea55dd3ab" class=""><em>Task: Creating a detailed world for a book</em></p></div><div style="display:contents" dir="auto"><p id="907c24d4-22e2-48f9-beb2-8b52ccba6b34" class="">ChatGPT was trained on literally billions of data points. All of that information allows it to create content you can’t even begin to imagine. That means it can be an incredible partner in creating rich, immersive worlds for you stories. Authors might use the following prompts to add depth to settings or background.</p></div><div style="display:contents" dir="auto"><p id="61718e7f-721d-445f-8829-fb106cddc4d2" class=""><strong>Here are a few example prompts you can use:</strong></p></div><div style="display:contents" dir="auto"><p id="2bd57fde-e331-4d1b-b7de-23059046f967" class="">1. You are an expert in worldbuilding. Given the setting of a [medieval fantasy kingdom], describe the political system, cultural norms, and geographical landscape.<br/>2. As an AI specialized in worldbuilding, create an outline of the social hierarchy, technology, and architectural styles in a [futuristic dystopian city].<br/>3. Develop an overview of the magic system, mythical creatures, and historical events in a [high fantasy world] where [magic is drawn from natural elements].</p></div><div style="display:contents" dir="auto"><h2 id="2c845713-8ca9-4006-ba06-fd43f5952024" class=""><strong>Writing prompts</strong></h2></div><div style="display:contents" dir="auto"><p id="3281b286-cf29-4c3f-beac-7aba8b4a59d9" class=""><em>Task: Generating writing prompts</em></p></div><div style="display:contents" dir="auto"><p id="f424943f-9f80-4b93-93ca-3eebd58541e2" class="">Want to reverse the roles a little bit? Let’s have ChatGPT prompt you! The AI tool can provide authors with unique and tailored prompts to help overcome writer’s block and spark new ideas.</p></div><div style="display:contents" dir="auto"><p id="9af476d6-3301-498c-ae06-cc13ce45144e" class=""><strong>Here are a few example prompts you can use:</strong></p></div><div style="display:contents" dir="auto"><p id="bbde27a3-fae8-4a07-b6c5-297c7b9e8139" class="">1. You are an AI that generates creative writing prompts. Please provide a unique prompt for a [romantic comedy] set in [Paris].<br/>2. As a prompt generator, suggest a compelling scenario for a [historical fiction] story set during the [American Civil War].<br/>3. Generate a plot twist for a [murder mystery] where the detective discovers that [the victim faked their own death].</p></div><div style="display:contents" dir="auto"><h2 id="1db75b8c-5d89-41ed-93e4-4c82a9b0d3c0" class=""><strong>Writing feedback</strong></h2></div><div style="display:contents" dir="auto"><p id="f84055a6-3bec-4f07-8326-135efd78e6bd" class=""><em>Task: Providing feedback on a piece of writing</em></p></div><div style="display:contents" dir="auto"><p id="a467d068-351b-45f0-9a72-c2384f17573b" class="">Many authors already use tools like Grammarly or Word’s native spell checker. Well, ChatGPT goes beyond basic copy editing and can analyze an author’s writing, provide constructive feedback, and suggest improvements.</p></div><div style="display:contents" dir="auto"><p id="49822b37-4f45-4197-8ae3-572240e01ca7" class="">1. You are an expert in analyzing and critiquing writing. Here is an excerpt from my [fantasy novel]: [Insert excerpt]. Please provide feedback and suggestions for improvement.<br/>2. As an AI trained in providing writing feedback, read this dialogue from my [crime thriller]. [Insert dialogue]. How can I make the conversation more realistic and engaging?<br/>3. Review this description of a [battle scene] from my [epic fantasy novel]. [Insert description]. How can I increase the tension and create a more vivid image?</p></div><div style="display:contents" dir="auto"><h2 id="ea943088-e159-4a3e-bf74-09dd058fa1d5" class=""><strong>Research assistance</strong></h2></div><div style="display:contents" dir="auto"><p id="07d5487f-c3e0-4090-9830-997bf1f4d379" class=""><em>Task: Assisting with research for a book</em></p></div><div style="display:contents" dir="auto"><p id="c555fb05-07f7-41d0-bd06-7c76d430dd00" class="">Working in non-fiction or historical fiction? ChatGPT can help conduct research, providing summaries of articles or books, answering specific questions, or suggesting relevant sources.</p></div><div style="display:contents" dir="auto"><p id="fc3ab0ac-6d1c-4951-8ee2-b2972e3be45b" class="">1. You are an AI research assistant. Can you provide a summary of [World War II] for my [historical fiction novel]?<br/>2. As an AI trained in research, can you explain the basics of [quantum physics] for my [science fiction novel]?<br/>3. I’m writing a [medical drama]. Can you provide information on [cardiac surgeries], their risks and success rates?</p></div><div style="display:contents" dir="auto"><p id="406f39c5-28b7-4b61-b049-ea642f88ad50" class="">These are just a few prompt examples for authors. If you take inspiration from the prompts, and adjust them to your specific needs or preference, there’s really no end to potential uses for ChatGPT.</p></div><div style="display:contents" dir="auto"><p id="1e023729-e0bf-441c-b5de-c90195335188" class=""><a href="https://basmo.app/how-to-write-a-book-with-chatgpt/">https://basmo.app/how-to-write-a-book-with-chatgpt/</a></p></div><div style="display:contents" dir="auto"><h3 id="0b9a6829-4479-417a-8dfb-65d7de9dd18e" class=""><strong>What Prompts to Use to Help You Write a Book?</strong></h3></div><div style="display:contents" dir="auto"><p id="fb3ffa65-d42c-4b7b-aca7-debb7bbb8ba0" class="">While we are definitely not experts in ChatGPT prompt engineering, we discovered through a surprisingly entertaining trial-and-error process what prompts can be used to get the chatbot to help out with writing a book.</p></div><div style="display:contents" dir="auto"><p id="11b993cb-21c9-4af4-a2a4-0cb39ae28518" class="">In the early stages of the process, you can use prompts like “What are the most lucrative niches I should focus on if I decide to write a book?”. This will give you a vague idea of topics people are generally interested in, which will increase your chances of having a successful book to your name.</p></div><div style="display:contents" dir="auto"><p id="0c72a699-34e5-4644-856c-e82cdcb6010f" class="">Obviously, with creative prompt engineering, you can get ChatGPT to go into even more depth with your niche research and that will lead to even better results.</p></div><div style="display:contents" dir="auto"><p id="30764a2b-0356-46f3-a148-134d0f5160ab" class="">Another good example of useful prompts could be: ” Please help me create a structure for a book I am planning to write. The action should be set in &lt;insert country/city/period&gt;. The book is about &lt;insert topic&gt;”.</p></div><div style="display:contents" dir="auto"><p id="ff2306ce-3ffa-4130-9c4a-829855fa2980" class="">While this is definitely not going to be the final stage of your preparation for writing a book, it can be a good start.</p></div><div style="display:contents" dir="auto"><p id="7858bafc-d5d6-411f-b48d-1b39308a9d00" class="">For research purposes, the prompts are pretty straightforward. Simply ask whatever it is you want to know and ChatGPT will deliver. You can ask for book recommendations for different topics you want to cover in your book, or simply ask questions you don’t know the answer to. You will receive a response based on the data available online, but you should always double-check this information to make sure it is accurate.</p></div><div style="display:contents" dir="auto"><p id="395898ad-707e-453d-b652-efd093228c46" class="">In the writing stage, your prompt engineering efforts will need to be a little more intense. In order to get the best results, you will need to ensure that your queries are as specific and detailed as possible. What they should sound like will actually depend on what you are trying to achieve.</p></div></div></article><span class="sans" style="font-size:14px;padding-top:2em"></span></body></html>

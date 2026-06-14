@@ -1,0 +1,14 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Large raw archives (keep locally; GitHub limit is 100MB per file)
+*.zip
+
+# Editor / IDE
+.vscode/
+.idea/
+*.swp
+*~
